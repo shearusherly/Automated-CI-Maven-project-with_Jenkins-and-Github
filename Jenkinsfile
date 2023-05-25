@@ -26,7 +26,9 @@ pipeline{
       }
       stage('Compile'){
           steps{
-          sh 'mvn compile'
+              def mavenHome= tool name: "Maven", type: "maven"
+              sh "${mavenHome}/bin/mvn compile"
+          //sh 'mvn compile'
           }
       }
       
@@ -39,7 +41,9 @@ pipeline{
       }
         stage('Test'){
           steps{
-          sh 'mvn test'
+                 def mvnHome= tool name: "Maven", type: "maven"
+       sh "${mvnHome}/bin/mvn test"
+          //sh 'mvn test'
           }
       }
        
@@ -51,7 +55,9 @@ pipeline{
       }
         stage('Install'){
           steps{
-          sh 'mvn install'
+                 def mavenHome2= tool name: "Maven", type: "maven"
+       sh "${mavenHome2}/bin/mvn install"
+          //sh 'mvn install'
           }
       }
         
