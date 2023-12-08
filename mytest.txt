@@ -1,3 +1,0 @@
-This is a simple text file for demo purpose
-Webhook trigger to Automate CI Pipeline
-Added one line on 05-06-2023 testing purpose
